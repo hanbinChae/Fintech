@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Welcome from "./components/Welcome";
-import List from "./components/List";
-import Axios from "./components/Axios";
+import Welcome from "./components/basic/Welcome";
+import List from "./components/basic/List";
+import Axios from "./components/basic/Axios";
 import NewsSearch from "./pages/NewsSearch";
 
 function App() {
