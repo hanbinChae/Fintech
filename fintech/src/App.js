@@ -6,6 +6,7 @@ import Axios from "./components/basic/Axios";
 import NewsSearch from "./pages/NewsSearch";
 import Auth from "./pages/Auth";
 import AuthResult from "./pages/AuthResult";
+import Account from "./pages/Account";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/news" element={<NewsSearch></NewsSearch>}></Route>
           <Route path="/auth" element={<Auth></Auth>}></Route>
           <Route path="/authResult" element={<AuthResult></AuthResult>}></Route>
+          <Route path="/main" element={<Account></Account>}></Route>
         
         </Routes>
       </BrowserRouter>
