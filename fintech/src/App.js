@@ -7,6 +7,7 @@ import Auth from "./pages/Auth";
 import AuthResult from "./pages/AuthResult";
 import Account from "./pages/Account";
 import Balance from "./pages/Balance";
+import QrCode from "./pages/QrCode";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/authResult" element={<AuthResult></AuthResult>}></Route>
           <Route path="/main" element={<Account></Account>}></Route>
           <Route path="/balance" element={<Balance></Balance>}></Route>
+          <Route path="/qrcode" element={<QrCode></QrCode>}></Route>
         
         </Routes>
       </BrowserRouter>
