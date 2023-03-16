@@ -6,9 +6,12 @@ import axios from "axios";
 
 const AuthResult = () => {
   const code = useLocation().search;
+  console.log(code)
   const authCode = queryString.parse(code).code;
+
   const [accessToken, setAccessToken] = useState("토큰 받기 전");
   const [userSeqNo, setUserSeqNo] = useState("사용자 번호 받기 전");
+
   const handleClick = () => {
     //우리가 전달할 데이터
     let sendData = {
@@ -36,6 +39,15 @@ const AuthResult = () => {
       console.log(data);
       setAccessToken(data.access_token);
       setUserSeqNo(data.user_seq_no);
+      
+      if (data.rsp_code !== "O0001") {
+        localStorage.setItem("accessToken", data.access_token);
+        localStorage.setItem("userSeqNo", data.user_seq_no);
+        alert("저장 완료");
+      } 
+      else {
+        alert("인증에 실패했습니다 다시 시도해 주세요");
+      }
     });
   };
 
