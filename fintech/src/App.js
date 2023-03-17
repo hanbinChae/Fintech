@@ -25,7 +25,7 @@ function App() {
           <Route path="/main" element={<Account></Account>}></Route>
           <Route path="/balance" element={<Balance></Balance>}></Route>
           <Route path="/qrcode" element={<QrCode></QrCode>}></Route>
-          <Route path="/qrcode" element={<QrReaderPage></QrReaderPage>}></Route>
+          <Route path="/qrreader" element={<QrReaderPage></QrReaderPage>}></Route>
         
         </Routes>
       </BrowserRouter>
